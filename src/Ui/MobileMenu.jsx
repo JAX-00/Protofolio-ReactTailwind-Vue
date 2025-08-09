@@ -7,6 +7,27 @@ function MobileMenu({isMenuOpen, setIsMenuOpen}) {
       <button onClick={() => setIsMenuOpen(false)} className='absolute top-5 right-7 text-2xl focus:outline-none cursor-pointer' aria-label='Close Menu'>
         <RxCross2 />
       </button>
+      <a onClick={() => setIsMenuOpen(false)} href="#home" className={`text-2xl font-semibold text-red-800 my-4 transform transition-transform duration-300 ${
+        isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+      }`}>
+                Home
+              </a>
+              <a onClick={() => setIsMenuOpen(false)} href="#about" className={`text-2xl font-semibold text-red-800 my-4 transform transition-transform duration-300 ${
+                isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+              }`}>
+                About
+              </a>
+
+              <a onClick={() => setIsMenuOpen(false)} href="#projects" className={`text-2xl font-semibold text-red-800 my-4 transform transition-transform duration-300 ${
+                isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+              }`}>
+                Projects
+              </a>
+              <a onClick={() => setIsMenuOpen(false)} href="#contact" className={`text-2xl font-semibold text-red-800 my-4 transform transition-transform duration-300 ${
+                isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+              }`}>
+                Contact
+              </a>
     </div>
   )
 }
