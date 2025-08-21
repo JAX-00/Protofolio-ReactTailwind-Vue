@@ -7,3 +7,41 @@ html, body{
   background: #fbfffe;
   color: #001514;
 }
+
+@layer utilities{
+  @keyframes loading {
+    0%{
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+} 
+100%{
+  transform: translateX(150%);
+  -webkit-transform: translateX(150%);
+  -moz-transform: translateX(150%);
+  -ms-transform: translateX(150%);
+  -o-transform: translateX(150%);
+}
+  }
+  .animate-loading-bar {
+    animation: loading 0.8s ease infinite;
+    -webkit-animation: loading 0.8s ease infinite;
+}
+}
+
+@layer utilities{
+  @keyframes blink {
+    0%, 100%{
+      opacity: 1;
+    }
+    50%{
+      opacity: 0;
+    }
+  }
+  .animate-blink{
+    animation: blink 3.8s step-end infinite;
+    -webkit-animation: blink 3.8s step-end infinite;
+}
+}
